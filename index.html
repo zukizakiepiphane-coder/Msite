@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pour toi 💖</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div class="bg-anim" aria-hidden="true"></div>
+
+    <main class="wrap">
+        <section class="page page--1" id="page1" aria-label="Page d’ouverture">
+            <header class="header">
+                <h1 class="title">Pour toi 💖</h1>
+                <p class="subtitle">Clique pour l’ouverture</p>
+            </header>
+
+
+            <section class="card card--cover" aria-label="Cadeau">
+                <div class="card__top">
+                    <div class="emoji" aria-hidden="true">🎁</div>
+                    <div class="sound-indicator" id="soundStatus">Son : en attente…</div>
+                </div>
+
+                <div class="cover__body">
+                    <div class="cover__emoji" aria-hidden="true">✨</div>
+                    <div class="cover__text">Clique ici pour ouvrir le cadeau</div>
+                    <button class="openBtn" id="openBtn" type="button">Ouvrir</button>
+
+                </div>
+            </section>
+        </section>
+
+        <section class="page page--2" id="page2" aria-label="Page photos" hidden>
+            <header class="header">
+                <h1 class="title">Tes photos & mon poème</h1>
+                <p class="subtitle">Diaporama avec poème en bas — ambiance multicolore</p>
+            </header>
+
+            <section class="card" aria-label="Emballage photo">
+                <div class="card__top">
+                    <div class="emoji" aria-hidden="true">✨</div>
+                    <div class="sound-indicator" id="soundStatus2">Son : en lecture</div>
+                </div>
+
+
+                <div class="slider" role="region" aria-label="Diaporama de 3 photos">
+                    <button class="nav prev" id="prevBtn" aria-label="Photo précédente">‹</button>
+
+                    <div class="viewport">
+                        <div class="track" id="track">
+                            <figure class="slide" data-caption="Photo 1">
+                                <img src="./IMG-20260515-WA0042.jpg" alt="Photo 1" draggable="false" />
+                            </figure>
+                            <figure class="slide" data-caption="Photo 2">
+                                <img src="./IMG-20260515-WA0043.jpg" alt="Photo 2" draggable="false" />
+                            </figure>
+                            <figure class="slide" data-caption="Photo 3">
+                                <img src="./IMG-20260515-WA0046.jpg" alt="Photo 3" draggable="false" />
+                            </figure>
+                        </div>
+                    </div>
+
+                    <button class="nav next" id="nextBtn" aria-label="Photo suivante">›</button>
+                </div>
+
+                <footer class="footer">
+                    <div class="dots" id="dots" aria-label="Progression"></div>
+                    <div class="caption" id="caption">Photo 1</div>
+                </footer>
+
+                <section class="poem" aria-label="Poème d’amitié">
+                    <div class="poem__glow" aria-hidden="true"></div>
+                    <div class="poem__text" id="poemText"></div>
+                </section>
+
+
+            </section>
+        </section>
+
+        <audio id="audio" preload="auto" src="./AUD-20260515-WA0047 (2).mp3"></audio>
+    </main>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
